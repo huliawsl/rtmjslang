@@ -1,6 +1,8 @@
 # rtmjsmaker extension
 # 一个助力于RTM-Add-On开发的插件
 
+github link:https://github.com/huliawsl/rtmjsmaker
+
 Chinese
 
 自动补全：
