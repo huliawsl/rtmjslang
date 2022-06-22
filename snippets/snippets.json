@@ -1,0 +1,58 @@
+{
+  "rtmjs-train": {
+	"prefix": "rtmjstrain",
+    "body": [
+		"var renderClass = ${0:renderClass};",
+		"importPackage(Packages.org.lwjgl.opengl);",
+		"importPackage(Packages.jp.ngt.rtm.render);",
+		"importPackage(Packages.jp.ngt.ngtlib.util);",
+		"\n",
+		"function init(par1, par2){\n",
+		"\t\n}\n\n",
+		"function render(entity, pass, par3){",
+		"\tif (entity != null) {\n\n\t}",
+		"\n\t\n}"
+	],
+    "description": "Builds the body of an rtm train script program."
+    
+  },
+  "rtmjs-registerParts": {
+	"prefix": "registerparts",
+    "body": [
+		"${1:object} = renderer.registerParts(new Parts(${2:object}));"
+	],
+    "description": "registerparts"
+    
+  },
+  "rtmjs-renderparts": {
+	"prefix": "renderparts",
+    "body": [
+		"GL11.glPushMatrix();",
+		"${1:object}.render(renderer);",
+		"GL11.glPopMatrix();"
+	],
+    "description": "render parts whithout animation"
+    
+  },
+  "rtmjs-translatef-render": {
+	"prefix": "translatef renderparts",
+    "body": [
+		"GL11.glPushMatrix();",
+		"GL11.glTranslatef(${2:X}, ${3:Y}, ${4:Z});",
+		"${1:object}.render(renderer);",
+		"GL11.glPopMatrix();"
+	],
+    "description": "translatef render"
+  },
+  "rtmjs-rotate-render": {
+	"prefix": "rotate renderparts",
+    "body": [
+		"GL11.glPushMatrix();",
+		"renderer.rotate(${2:angle}, ${3:axis}, ${4:X}, ${5:Y}, ${6:Z});",
+		"${1:object}.render(renderer);",
+		"GL11.glPopMatrix();"
+	],
+    "description": "rotate render"
+  }
+
+}
